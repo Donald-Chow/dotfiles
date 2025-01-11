@@ -69,6 +69,13 @@ if [[ `uname` =~ "Darwin" ]]; then
   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 fi
 
+# p10k symlink
+for name in p10k.zsh; do
+  target="$HOME/.p10k.zsh"
+  backup $target
+  symlink $PWD/$name $target
+done
+
 # Refresh the current terminal with the newly installed configuration
 exec zsh
 

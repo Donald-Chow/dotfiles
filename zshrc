@@ -78,7 +78,9 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
-sudo /etc/init.d/postgresql start
+
+# Start postgresql on boot
+# sudo /etc/init.d/postgresql start
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
